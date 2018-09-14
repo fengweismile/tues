@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/vote
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+  servlet:
+    multipart:
+     enabled: true
+     max-file-size: 50mb
+     max-request-size: 50mb
+
+mybatis:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.ssm.tues.po
+server:
+  servlet:
+    context-path: /tues
+
